@@ -1,0 +1,90 @@
+[
+   {
+      "id": 1,
+      "title": "zanahoria",
+      "description": "comestible",
+      "price": 30,
+      "thumbnail": "prueba1",
+      "code": "abc1",
+      "stock": 10,
+      "status": true,
+      "category": "verdura"
+   },
+   {
+      "id": 2,
+      "title": "pera",
+      "description": "comestible",
+      "price": 15,
+      "thumbnail": "prueba2",
+      "code": "abc2",
+      "stock": 11,
+      "status": true,
+      "category": "fruta"
+   },
+   {
+      "id": 3,
+      "title": "manzana",
+      "description": "comestible",
+      "price": 19,
+      "thumbnail": "prueba3",
+      "code": "abc3",
+      "stock": 19,
+      "status": true,
+      "category": "fruta"
+   },
+   {
+      "id": 4,
+      "title": "platano",
+      "description": "comestible",
+      "price": 10,
+      "thumbnail": "prueba4",
+      "code": "abc4",
+      "stock": 30,
+      "status": true,
+      "category": "fruta"
+   },
+   {
+      "id": 5,
+      "title": "Fríjol rojo",
+      "description": "comestible",
+      "price": 5,
+      "thumbnail": "prueba5",
+      "code": "abc5",
+      "stock": 32,
+      "status": true,
+      "category": "grano"
+   },
+   {
+      "id": 6,
+      "title": "Papa",
+      "description": "comestible",
+      "price": 8,
+      "thumbnail": "prueba6",
+      "code": "abc6",
+      "stock": 200,
+      "status": true,
+      "category": "verdura"
+   },
+   {
+      "id": 7,
+      "title": "Pan dulce",
+      "description": "comestible",
+      "price": 3,
+      "thumbnail": "prueba7",
+      "code": "abc7",
+      "stock": 21,
+      "status": true,
+      "category": "panaderia"
+   },
+   {
+      "id": 8,
+      "title": "Desodorante",
+      "description": "Aseo personal",
+      "price": 15,
+      "thumbnail": "prueba8",
+      "code": "abc8",
+      "stock": 30,
+      "status": true,
+      "category": "higiene"
+   }
+]
