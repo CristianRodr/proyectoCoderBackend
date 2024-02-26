@@ -24,29 +24,3 @@ app.get('/', (req, res) => {
 const server = app.listen(PORT, () => {
     console.log(`Server escuchando en puerto ${PORT}`);
 });
-
-/* 
-################## PARA PRUEBAS DE USO EN POSTMAN ##################                
-.........................pruebas en product
-{
-    "title": "Fríjol rojo",
-    "description": "comestible",
-    "price": 5,
-    "thumbnail": "prueba5",
-    "code": "abc5",
-    "stock": 32,
-    "status": true,
-    "category": "grano"
-}
-
-http://localhost:8080/api/products
-http://localhost:8080/api/products/8
-http://localhost:8080/api/products?limit=3
-
-............................Pruebas en Carts
-{"products": []}
-
-http://localhost:8080/api/carts/
-http://localhost:8080/api/carts/1
-http://localhost:8080/api/carts/4/product/7
-*/
