@@ -1,7 +1,5 @@
 # proyecto Coder Backend
-***
 ## PARA PRUEBAS DE USO EN POSTMAN 
-***
 ### pruebas en product
 
 ``{
