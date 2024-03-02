@@ -26,7 +26,7 @@ router.get('/',
         if (limit && (limit > 0)) {
             resultadoJson = resultadoJson.slice(0, limit)
         }
-
+        //- - - - render view home
         res.status(200).render('home', {
             prods: resultadoJson,
             pageTitle: 'Add Product',
