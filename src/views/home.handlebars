@@ -1,0 +1,34 @@
+<main>
+    {{#if hasProducts }}
+        <div>
+            {{#each prods}}
+                <li>
+                    <p><b>id</b>: {{this.id}}</p>
+                    <p><b>title</b>: {{this.title}}</p>
+                    <p><b>description: </b>{{this.description}}</p>
+                    <p><b>price</b>: {{this.price}}</p>
+                    <p><b>thumbnail</b>: {{this.thumbnail}}</p>
+                    <p><b>code</b>: {{this.code}}</p>
+                    <p><b>stock</b>: {{this.stock}}</p>
+                    <p><b>status</b>: {{this.status}}</p>
+                    <p><b>category</b>: {{this.category}}</p>
+                </li>
+            {{/each}}
+        </div>
+    {{ else }}
+        <h1>No Products Founds!</h1>
+    {{/if}}
+</main>
+
+<!--
+{
+"id": 1,
+"title": "zanahoria",
+"description": "comestible",
+"price": 30,
+"thumbnail": "prueba1",
+"code": "abc1",
+"stock": 10,
+"status": true,
+"category": "verdura"
+}-->

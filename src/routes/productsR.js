@@ -27,7 +27,13 @@ router.get('/',
             resultadoJson = resultadoJson.slice(0, limit)
         }
 
-        res.status(200).json(resultadoJson);
+        res.status(200).render('home', {
+            prods: resultadoJson,
+            pageTitle: 'Add Product',
+            path: "/",
+            hasProducts: resultadoJson.length > 0,
+            activeProduct: true,
+        });
     });
 //...............crear
 router.post('/',
