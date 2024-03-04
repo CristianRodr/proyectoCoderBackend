@@ -2,7 +2,7 @@ const {getDatos, saveDatos} = require("../util/fs");
 
 const fs = require("fs");
 
-class ProductManeger {
+class ProductManager {
     constructor(rutaArchivo) {
         this.ruta = rutaArchivo;
     }
@@ -30,10 +30,15 @@ class ProductManeger {
         }
 
         products.push(nuevoProducto);
-        saveDatos(this.ruta, products);
+        try {
+            saveDatos(this.ruta, products);
+        } catch (e) {
+            return null
+        }
+
 
         return nuevoProducto;
     }
 }
 
-module.exports = ProductManeger;
+module.exports = ProductManager;

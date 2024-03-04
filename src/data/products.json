@@ -97,5 +97,60 @@
       "stock": 32,
       "status": true,
       "category": "grano"
+   },
+   {
+      "id": 10,
+      "title": "arroz",
+      "description": "comestible",
+      "price": 4,
+      "thumbnail": "prueba10",
+      "code": "abc10",
+      "stock": 32,
+      "status": true,
+      "category": "grano"
+   },
+   {
+      "id": 11,
+      "title": "uva",
+      "description": "comestible",
+      "price": 4,
+      "thumbnail": "prueba11",
+      "code": "abc11",
+      "stock": 20,
+      "status": true,
+      "category": "fruta"
+   },
+   {
+      "id": 12,
+      "title": "piña",
+      "description": "comestible",
+      "price": 4,
+      "thumbnail": "prueba12",
+      "code": "abc12",
+      "stock": 20,
+      "status": true,
+      "category": "fruta"
+   },
+   {
+      "id": 13,
+      "title": "lulo",
+      "description": "comestible",
+      "price": 4,
+      "thumbnail": "prueba13",
+      "code": "abc13",
+      "stock": 20,
+      "status": true,
+      "category": "fruta"
+   },
+   {
+      "id": 14,
+      "title": "mandarina",
+      "description": "comestible",
+      "price": 10,
+      "thumbnail": "prueba14",
+      "code": "abc14",
+      "stock": 22,
+      "status": true,
+      "category": "fruta"
    }
 ]

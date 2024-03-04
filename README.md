@@ -1,26 +1,39 @@
 # proyecto Coder Backend
-## PARA PRUEBAS DE USO EN POSTMAN 
-### pruebas en product
+## PARA PRUEBAS DE USO EN POSTMAN
+***
+### Pruebas en socket
 
-``{
-    "title": "Fríjol rojo",
-    "description": "comestible",
-    "price": 5,
-    "thumbnail": "prueba5",
-    "code": "abc5",
-    "stock": 32,
-    "status": true,
-    "category": "grano"
-}``
+http://localhost:8080/realtimeproducts
 
-http://localhost:8080/api/products<br>
-http://localhost:8080/api/products/8<br>
+### Prueba usa de motor de plantillas handlebars
+
+http://localhost:8080
+
+***
+
+### Pruebas en product
+
+``{ "title": "cafe", 
+    "description": "bebida", 
+    "price": 5, 
+    "thumbnail": "prueba15", 
+    "code": "abc15", 
+    "stock": 10, 
+    "status": true, 
+    "category": "grano" }``
+
+http://localhost:8080/api/products 
+
+http://localhost:8080/api/products/8
+
 http://localhost:8080/api/products?limit=3
 ***
 ### Pruebas en Carts
 
 `{"products": []}`
 
-http://localhost:8080/api/carts/<br>
-http://localhost:8080/api/carts/1<br>
+http://localhost:8080/api/carts/
+
+http://localhost:8080/api/carts/1
+
 http://localhost:8080/api/carts/4/product/7

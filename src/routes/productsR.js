@@ -9,7 +9,7 @@ const rutaDirectorio = require('../util/path');
 // remendando ruta hacia data
 let rutaProduct = path.join(rutaDirectorio, "data", "products.json");
 // instanciando la clase ProductsManager
-const ProductsManager = require('../managers/ProductManeger')
+const ProductsManager = require('../class/ProductManager')
 const productManager = new ProductsManager(rutaProduct);
 //------------------------------------------------
 // función de simplification, llamado de obtención
@@ -27,13 +27,7 @@ router.get('/',
             resultadoJson = resultadoJson.slice(0, limit)
         }
         //- - - - render view home
-        res.status(200).render('home', {
-            prods: resultadoJson,
-            pageTitle: 'Add Product',
-            path: "/",
-            hasProducts: resultadoJson.length > 0,
-            activeProduct: true,
-        });
+        res.status(200).json(resultadoJson);
     });
 //...............crear
 router.post('/',
@@ -51,6 +45,11 @@ router.post('/',
         }
 
         let nuevoProducto = productManager.addProduct(req.body);
+        if (!nuevoProducto) {
+            res.setHeader('Content-Type', 'application/json');
+            return res.status(500).json({e: `error inesperado en el servidor`});
+        }
+        req.io.emit('nuevoProducto', nuevoProducto) //uso de socket
 
         res.status(201).json({
             nuevoProducto

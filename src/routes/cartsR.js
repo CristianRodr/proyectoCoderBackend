@@ -6,20 +6,23 @@ const router = express.Router();
 const fs = require("fs");
 //-----------------------------------------------
 const rutaDirectorio = require('../util/path');
-
 //-----------------------------------------------
-// remendando ruta hacia data
+// remendando rutas hacia data.....
 let rutaCarts = path.join(rutaDirectorio, "data", "carts.json");
-// instanciando la clase ProductsManager
-const CartsManager = require('../managers/cartsManager')
-
+let rutaProduct = path.join(rutaDirectorio, "data", "products.json");
+// instanciando la clase ProductsManager.....
+const ProductsManager = require('../class/ProductManager')
+const productManager = new ProductsManager(rutaProduct);
+// instanciando la clase CartsManager......
+const CartsManager = require('../class/cartsManager')
 const cartManager = new CartsManager(rutaCarts);
 //------------------------------------------------
 //sintetizando llamada
 const reedCarts = () => cartManager.getCart();
 const obtenerCart = reedCarts();
 //------------------------------------------------
-//funcion para la lectura de products.json
+//función para la lectura de products.json
+/*
 function loadJSONFile() {
     try {
         const fileContent = fs.readFileSync(path.join(__dirname, '../', 'data', 'products.json'), 'utf-8');
@@ -28,6 +31,7 @@ function loadJSONFile() {
         console.error('Error al cargar el archivo JSON:', error);
     }
 }
+*/
 //------------------------------------------------
 //...............obtener carts x id
 router.get('/:cid',
@@ -87,7 +91,7 @@ router.post('/:cid/product/:pid',
             return res.status(400).json({error: `El id debe ser numérico`});
         }
 
-        let resultadoJson = loadJSONFile();
+        let resultadoJson = productManager.getProducts();
 
         let resultadoProductId = resultadoJson.find(r => r.id === pid);
         if (!resultadoProductId) {
