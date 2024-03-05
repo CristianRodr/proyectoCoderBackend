@@ -1,7 +1,8 @@
 <main>
     {{#if hasProducts }}
-        <div class="cards">
+	    <div id="nuevo__producto" class="log-list">
             {{#each prods}}
+            <ul class="log-item">
                 <li class="card">
                     <p><b>id</b>: {{this.id}}</p>
                     <p><b>title</b>: {{this.title}}</p>
@@ -13,6 +14,7 @@
                     <p><b>status</b>: {{this.status}}</p>
                     <p><b>category</b>: {{this.category}}</p>
                 </li>
+            </ul>
             {{/each}}
         </div>
     {{ else }}
